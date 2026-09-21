@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local AI Starter Kit — Free Guide</title>
+<style>
+  :root{--bg:#0d1117;--bg2:#161b22;--card:#1c2128;--txt:#e6edf3;--muted:#8b949e;--acc:#58a6ff;--brd:#30363d;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;}
+  .wrap{max-width:760px;margin:0 auto;padding:40px 20px 60px;}
+  h1{font-size:2rem;line-height:1.25;margin:20px 0 12px;}
+  h2{font-size:1.35rem;margin:28px 0 10px;color:var(--acc);}
+  p{color:var(--muted);margin-bottom:14px;}
+  .sub{font-size:1.1rem;color:var(--txt);margin-bottom:24px;}
+  .card{background:var(--card);border:1px solid var(--brd);border-radius:10px;padding:22px;margin:14px 0;}
+  .card b{color:var(--txt);}
+  ul{padding-left:22px;margin-bottom:14px;}li{margin-bottom:8px;color:var(--muted);}
+  .cta{background:var(--acc);color:#0d1117;border:none;border-radius:8px;padding:14px 22px;font-size:1.05rem;font-weight:600;cursor:pointer;}
+  .cta:hover{filter:brightness(1.1);}
+  .form{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0;}
+  .form input[type=email]{flex:1;min-width:220px;padding:13px 14px;border:1px solid var(--brd);border-radius:8px;background:#0d1117;color:var(--txt);font-size:1rem;}
+  .form input[type=email]:focus{outline:2px solid var(--acc);}
+  .privacy{font-size:.85rem;color:var(--muted);margin-top:10px;}
+  .pill{display:inline-block;background:#0d1117;border:1px solid var(--brd);color:var(--acc);border-radius:999px;padding:4px 12px;font-size:.8rem;margin-bottom:18px;}
+  footer{margin-top:40px;border-top:1px solid var(--brd);padding-top:16px;font-size:.85rem;color:var(--muted);}
+  #msg{display:none;margin-top:12px;color:#3fb950;font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="pill">Free guide · 15-minute read · No per-token bills</span>
+  <h1>Run capable AI on hardware you already own — no cloud lock-in, no per-token bills.</h1>
+  <p class="sub">The 15-minute setup guide that kills GPU/VMware lock-in and keeps sensitive data private.</p>
+
+  <div class="card">
+    <b>Your cloud AI is quietly bleeding you dry.</b>
+    <p>Frontier cloud AI bills per token. VMware/Broadcom renewals jumped several-fold. RunPod GPU-hour costs stack up. And your most sensitive data — client records, student grades, legal work, patient info — can't go near a third-party API.</p>
+    <p>Local AI is the off-ramp. Modern small models (DeepSeek R1, Phi-4, Qwen) run on a laptop and handle the 80% of everyday work — code, notes, private agents — with no subscription and nothing leaving your machine.</p>
+  </div>
+
+  <h2>What's inside the Starter Kit</h2>
+
+  <div class="card">
+    <b>1 · Why local beats cloud.</b>
+    <p>One-time hardware cost instead of per-token bills. Data that never leaves your machine. No vendor lock-in — swap models freely, work offline, survive outages.</p>
+  </div>
+  <div class="card">
+    <b>2 · The 15-minute install.</b>
+    <p>Install Ollama → pull a small model → run it. Optional Open WebUI for a ChatGPT-like interface. Three small models (DeepSeek R1 ~7B, Phi-4 14B, Qwen ~7B) sized for 8/16/32GB machines.</p>
+  </div>
+  <div class="card">
+    <b>3 · The hybrid play that cuts your bill up to 90%.</b>
+    <p>Run local for the 80% of everyday tasks; use cloud only for the 20% that needs frontier power. Keep sensitive workloads private and self-hosted — including a local AI agent for private automation.</p>
+  </div>
+
+  <div class="card">
+    <p><b>Proof it's production-ready:</b> A local Fable model cracked a 370-year-old unsolved cipher this month; Perplexity + Nvidia just shipped a fully-local AI agent with zero token cost. Local AI isn't a toy anymore.</p>
+  </div>
+
+  <form class="form" id="optin" action="#" method="POST">
+    <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
+    <button type="submit" class="cta">Send me the free Starter Kit</button>
+  </form>
+  <p id="msg">You're in — check your inbox for the Local AI Starter Kit.</p>
+  <p class="privacy">Free. No account needed beyond your email. One-time read. We don't sell or share your data (privacy line).</p>
+
+  <footer>
+    Built by honestlyai — indie, self-hosted, no cloud telemetry. This page is a free asset; outreach is gated on owner approval.
+  </footer>
+</div>
+<script>
+  document.getElementById('optin').addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = e.target.email.value;
+    // Capture for funnel (server hook goes here when Jeremy approves outreach).
+    var payload = {email: email, source: 'local-ai-starter-kit'};
+    try{
+      var k='marcus_leads'; var arr=JSON.parse(localStorage.getItem(k)||'[]'); arr.push(payload); localStorage.setItem(k,JSON.stringify(arr));
+    }catch(err){}
+    document.getElementById('msg').style.display='block';
+    e.target.querySelector('input').value='';
+    e.target.querySelector('.cta').textContent='✓ Check your inbox';
+  });
+</script>
+</body>
+</html>
