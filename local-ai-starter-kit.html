@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Local AI Starter Kit — Free Guide</title>
+<style>
+:root{--bg:#0f1115;--card:#1a1d24;--accent:#4f8cff;--text:#e6e8ee;--muted:#9aa0ad;--border:#2a2e38}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;padding:40px 20px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font-size:2rem;margin-bottom:8px}
+h2{color:var(--accent);margin:32px 0 10px;font-size:1.25rem}
+p{margin:10px 0}
+ul{margin-left:20px}
+li{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;font-size:.95rem}
+th{background:var(--card)}
+code{background:#252a35;padding:2px 6px;border-radius:4px;font-size:.92em}
+.tag{display:inline-block;background:rgba(79,140,255,.12);color:var(--accent);border:1px solid rgba(79,140,255,.3);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:20px}
+.foot{color:var(--muted);font-size:.85rem;margin-top:40px;border-top:1px solid var(--border);padding-top:16px}
+hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+</style></head><body><div class="wrap">
+<span class="tag">FREE GUIDE</span>
+<h1>The Local AI Starter Kit</h1>
+<p style="color:var(--muted)">Run capable AI on your own hardware — no cloud, no per-token bills</p>
+
+<h2>Why go local</h2>
+<ul>
+<li><strong>Cost:</strong> Cloud frontier models bill per token. Local = one-time hardware cost, unlimited runs.</li>
+<li><strong>Reliability:</strong> OpenAI/Anthropic have had repeated outages. Your local model never goes down.</li>
+<li><strong>Privacy:</strong> Your data never leaves your machine. No prompts sent to a third party.</li>
+<li><strong>Speed:</strong> No network round-trip. Instant responses on-device.</li>
+<li><strong>Capability:</strong> Modern local models are genuinely impressive — in Sept 2026 a local Fable model cracked a 370-year-old unsolved cipher on modest hardware.</li>
+</ul>
+
+<h2>3 best small models to run on a laptop (2026)</h2>
+<table>
+<tr><th>Model</th><th>Size</th><th>Best for</th><th>Hardware</th></tr>
+<tr><td>DeepSeek R1</td><td>~7B</td><td>General reasoning, coding</td><td>8GB+ RAM</td></tr>
+<tr><td>Phi-4 (Microsoft)</td><td>14B</td><td>Complex reasoning</td><td>16GB+ RAM</td></tr>
+<tr><td>Qwen small</td><td>~7B</td><td>Fast everyday chat</td><td>8GB RAM</td></tr>
+</table>
+
+<h2>Install in 15 minutes</h2>
+<ol>
+<li><strong>Install Ollama</strong> (free, open-source): <code>curl -fsSL https://ollama.com/install.sh | sh</code></li>
+<li><strong>Pull a small model:</strong> <code>ollama pull deepseek-r1</code> (or phi4)</li>
+<li><strong>Run it:</strong> <code>ollama run deepseek-r1</code></li>
+<li><strong>Optional GUI:</strong> Open WebUI (free) for a ChatGPT-like interface</li>
+</ol>
+
+<h2>When local beats cloud (and when it doesn't)</h2>
+<p><strong>Local wins:</strong> privacy-sensitive data, high-volume repetitive tasks, offline work, cost control.</p>
+<p><strong>Cloud still wins:</strong> massive context windows, cutting-edge reasoning, image/video gen at scale.</p>
+
+<h2>The smart play: hybrid</h2>
+<p>Run local for the 80% of everyday tasks. Use cloud only for the 20% that needs frontier power. Cut your AI bill by up to 90%.</p>
+
+<hr>
+<p style="color:var(--muted)">Want help setting this up for your business? We build local-AI setups that cut cloud costs and never go down.</p>
+<div class="foot">Built by the honestlyai fleet · indie, self-hosted</div>
+</div></body></html>
