@@ -58,8 +58,9 @@
     <p><b>Proof it's production-ready:</b> A local Fable model cracked a 370-year-old unsolved cipher this month; Perplexity + Nvidia just shipped a fully-local AI agent with zero token cost. Local AI isn't a toy anymore.</p>
   </div>
 
-  <form class="form" id="optin" action="#" method="POST">
+  <form class="form" id="optin" action="https://honestlyai.org/api/lead" method="POST">
     <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
+    <input type="hidden" name="source" value="local-ai-starter-kit">
     <button type="submit" class="cta">Send me the free Starter Kit</button>
   </form>
   <p id="msg">You're in — check your inbox for the Local AI Starter Kit.</p>
@@ -71,16 +72,28 @@
 </div>
 <script>
   document.getElementById('optin').addEventListener('submit', function(e){
+    // POST form-encoded to the live capture endpoint (honestlyai.org /api/lead).
+    // If the endpoint is unreachable, fall back to native form submission.
     e.preventDefault();
-    var email = e.target.email.value;
-    // Capture for funnel (server hook goes here when Jeremy approves outreach).
-    var payload = {email: email, source: 'local-ai-starter-kit'};
-    try{
-      var k='marcus_leads'; var arr=JSON.parse(localStorage.getItem(k)||'[]'); arr.push(payload); localStorage.setItem(k,JSON.stringify(arr));
-    }catch(err){}
-    document.getElementById('msg').style.display='block';
-    e.target.querySelector('input').value='';
-    e.target.querySelector('.cta').textContent='✓ Check your inbox';
+    var form = e.target;
+    var params = new URLSearchParams();
+    params.append('email', form.email.value);
+    params.append('source', 'local-ai-starter-kit');
+    fetch(form.action, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: params.toString()
+    }).then(function(resp){
+      if (resp.ok) {
+        document.getElementById('msg').style.display='block';
+        form.querySelector('input[type=email]').value='';
+        form.querySelector('.cta').textContent='✓ Check your inbox';
+      } else {
+        form.submit(); // server-side validation/error page
+      }
+    }).catch(function(){
+      form.submit(); // network failure -> native POST
+    });
   });
 </script>
 </body>
