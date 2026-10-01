@@ -47,7 +47,7 @@
 </script>
 
 <style>
-  :root{--bg:#0d1117;--bg2:#161b22;--card:#1c2128;--txt:#e6edf3;--muted:#8b949e;--acc:#58a6ff;--brd:#30363d;}
+  :root{--bg:#0d1117;--bg2:#161b22;--card:#1c2128;--txt:#e6edf3;--muted:#8b949e;--acc:#58a6ff;--brd:#30363d;--acc2:#3fb950;}
   *{margin:0;padding:0;box-sizing:border-box;}
   body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;}
   .wrap{max-width:760px;margin:0 auto;padding:40px 20px 60px;}
@@ -60,13 +60,21 @@
   ul{padding-left:22px;margin-bottom:14px;}li{margin-bottom:8px;color:var(--muted);}
   .cta{background:var(--acc);color:#0d1117;border:none;border-radius:8px;padding:14px 22px;font-size:1.05rem;font-weight:600;cursor:pointer;}
   .cta:hover{filter:brightness(1.1);}
+  .cta2{background:var(--acc2);color:#0d1117;border:none;border-radius:8px;padding:14px 22px;font-size:1.05rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;}
+  .cta2:hover{filter:brightness(1.1);}
   .form{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0;}
   .form input[type=email]{flex:1;min-width:220px;padding:13px 14px;border:1px solid var(--brd);border-radius:8px;background:#0d1117;color:var(--txt);font-size:1rem;}
   .form input[type=email]:focus{outline:2px solid var(--acc);}
   .privacy{font-size:.85rem;color:var(--muted);margin-top:10px;}
   .pill{display:inline-block;background:#0d1117;border:1px solid var(--brd);color:var(--acc);border-radius:999px;padding:4px 12px;font-size:.8rem;margin-bottom:18px;}
+  .pill2{display:inline-block;background:#0d1117;border:1px solid var(--brd);color:var(--acc2);border-radius:999px;padding:4px 12px;font-size:.8rem;margin-bottom:18px;}
   footer{margin-top:40px;border-top:1px solid var(--brd);padding-top:16px;font-size:.85rem;color:var(--muted);}
   #msg{display:none;margin-top:12px;color:#3fb950;font-weight:600;}
+  .product-card{background:var(--card);border:1px solid var(--acc2);border-radius:10px;padding:24px;margin:20px 0;}
+  .product-card h3{color:var(--acc2);font-size:1.2rem;margin-bottom:10px;}
+  .product-card .price{font-size:1.5rem;font-weight:700;color:var(--txt);margin:8px 0;}
+  .product-card .price span{font-size:1rem;color:var(--muted);font-weight:400;text-decoration:line-through;margin-left:8px;}
+  .divider{border:0;border-top:1px solid var(--brd);margin:32px 0;}
 </style>
 </head>
 <body>
@@ -113,6 +121,28 @@
   </form>
   <p id="msg">You're in — check your inbox for the Local AI Starter Kit.</p>
   <p class="privacy">Free. No account needed beyond your email. One-time read. We don't sell or share your data (privacy line).</p>
+
+  <hr class="divider">
+
+  <span class="pill2">Also from honestlyai · $7 · Instant download</span>
+  <h2>Brain Dump → Done: The ADHD Planner That Actually Works</h2>
+  <p class="sub">If your brain has 47 tabs open and none of them are closing — this is the paper-based system that fixes it in 5 minutes.</p>
+
+  <div class="product-card">
+    <h3>🧠 Brain Dump → Done</h3>
+    <p>A simple 5-step paper planner designed specifically for ADHD and AuDHD brains. No app, no subscription, no notifications — just a system that works WITH how your brain actually functions.</p>
+    <div class="price">$7 <span>$15</span></div>
+    <ul>
+      <li><b>Step 1 — Brain Dump:</b> Get every open loop out of your head and onto paper</li>
+      <li><b>Step 2 — Sort:</b> Group by category (work, life, admin, maybe)</li>
+      <li><b>Step 3 — Pick 3:</b> Choose just 3 tasks for today (reduces overwhelm)</li>
+      <li><b>Step 4 — Prioritize:</b> Rank by urgency + energy required</li>
+      <li><b>Step 5 — Weekly Review:</b> Reflect, adjust, and plan next week</li>
+    </ul>
+    <p style="margin-top:16px;"><b>Why it works when apps don't:</b> ADHD brains struggle with digital task managers — too many features, too much friction, too many notifications. Paper removes all of that. The Brain Dump step specifically addresses executive dysfunction by externalizing the working memory load.</p>
+    <p style="margin-top:16px;"><a href="https://honestlyai.org" class="cta2">Get the planner for $7 →</a></p>
+    <p class="privacy" style="margin-top:12px;">Instant PDF download. Print at home. No account needed. Stripe-secured checkout.</p>
+  </div>
 
   <footer>
     Built by honestlyai — indie, self-hosted, no cloud telemetry. This page is a free asset; outreach is gated on owner approval.
