@@ -3,176 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Local AI Starter Kit — Free 15-Minute Setup Guide | honestlyai</title>
-<meta name="description" content="Free guide: run capable AI on hardware you already own. 15-minute setup with Ollama, DeepSeek R1, and Open WebUI. No cloud lock-in, no per-token bills, no subscriptions.">
-<meta name="keywords" content="local AI, Ollama, DeepSeek R1, Open WebUI, self-hosted AI, private AI, free AI setup, local LLM, AI starter kit, no cloud AI">
-<meta name="author" content="honestlyai">
+<title>Brain Dump → Done — ADHD Paper Planner | Honestly AuDHD</title>
+<meta name="description" content="A 5-page paper planner for ADHD and AuDHD brains. Get the chaos out of your head and pick the one thing you'll actually do. $7 instant PDF download.">
+<meta name="keywords" content="ADHD planner, AuDHD planner, brain dump method, executive dysfunction tools, ADHD productivity, paper planner ADHD">
+<meta name="author" content="Honestly AuDHD">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://canthitshat.github.io/local-ai-starter-kit-lander/">
-
-<!-- Open Graph / Facebook -->
+<link rel="canonical" href="https://honestlyai.org/">
+<!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://canthitshat.github.io/local-ai-starter-kit-lander/">
-<meta property="og:title" content="Local AI Starter Kit — Free 15-Minute Setup Guide">
-<meta property="og:description" content="Run capable AI on hardware you already own. No cloud lock-in, no per-token bills. 15-minute setup with Ollama, DeepSeek R1, and Open WebUI.">
-<meta property="og:site_name" content="honestlyai">
-<meta property="og:locale" content="en_US">
-
+<meta property="og:title" content="Brain Dump → Done — ADHD Paper Planner">
+<meta property="og:description" content="A 5-page paper system for ADHD brains. Get the chaos out of your head. $7 instant download.">
+<meta property="og:url" content="https://honestlyai.org/">
+<meta property="og:site_name" content="Honestly AuDHD">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Local AI Starter Kit — Free 15-Minute Setup Guide">
-<meta name="twitter:description" content="Run capable AI on hardware you already own. No cloud lock-in, no per-token bills. 15-minute setup with Ollama, DeepSeek R1, and Open WebUI.">
-<meta name="twitter:creator" content="@honestlyai">
-
-<!-- Structured Data for SEO -->
+<meta name="twitter:title" content="Brain Dump → Done — ADHD Paper Planner">
+<meta name="twitter:description" content="A 5-page paper system for ADHD brains. Get the chaos out of your head. $7 instant download.">
+<!-- Redirect to product page after a short delay for SEO crawlers -->
+<meta http-equiv="refresh" content="3;url=https://honestlyai.org/">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TechArticle",
-  "headline": "Local AI Starter Kit — Free 15-Minute Setup Guide",
-  "description": "Run capable AI on hardware you already own. No cloud lock-in, no per-token bills. 15-minute setup with Ollama, DeepSeek R1, and Open WebUI.",
-  "author": {
-    "@type": "Organization",
-    "name": "honestlyai",
-    "url": "https://honestlyai.org"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "honestlyai"
-  },
-  "about": ["Local AI", "Ollama", "DeepSeek R1", "Self-hosted AI", "Private AI"],
-  "keywords": "local AI, Ollama, DeepSeek R1, Open WebUI, self-hosted AI, private AI",
-  "isAccessibleForFree": true
+  "@type": "Product",
+  "name": "Brain Dump → Done",
+  "description": "A 5-page paper planner system for ADHD and AuDHD brains. Brain dump, sort into buckets, pick three, prioritize, weekly review.",
+  "brand": {"@type": "Brand", "name": "Honestly AuDHD"},
+  "offers": {
+    "@type": "Offer",
+    "price": "7.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://honestlyai.org/"
+  }
 }
 </script>
-
 <style>
-  :root{--bg:#0d1117;--bg2:#161b22;--card:#1c2128;--txt:#e6edf3;--muted:#8b949e;--acc:#58a6ff;--brd:#30363d;--acc2:#3fb950;}
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;}
-  .wrap{max-width:760px;margin:0 auto;padding:40px 20px 60px;}
-  h1{font-size:2rem;line-height:1.25;margin:20px 0 12px;}
-  h2{font-size:1.35rem;margin:28px 0 10px;color:var(--acc);}
-  p{color:var(--muted);margin-bottom:14px;}
-  .sub{font-size:1.1rem;color:var(--txt);margin-bottom:24px;}
-  .card{background:var(--card);border:1px solid var(--brd);border-radius:10px;padding:22px;margin:14px 0;}
-  .card b{color:var(--txt);}
-  ul{padding-left:22px;margin-bottom:14px;}li{margin-bottom:8px;color:var(--muted);}
-  .cta{background:var(--acc);color:#0d1117;border:none;border-radius:8px;padding:14px 22px;font-size:1.05rem;font-weight:600;cursor:pointer;}
-  .cta:hover{filter:brightness(1.1);}
-  .cta2{background:var(--acc2);color:#0d1117;border:none;border-radius:8px;padding:14px 22px;font-size:1.05rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block;}
-  .cta2:hover{filter:brightness(1.1);}
-  .form{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0;}
-  .form input[type=email]{flex:1;min-width:220px;padding:13px 14px;border:1px solid var(--brd);border-radius:8px;background:#0d1117;color:var(--txt);font-size:1rem;}
-  .form input[type=email]:focus{outline:2px solid var(--acc);}
-  .privacy{font-size:.85rem;color:var(--muted);margin-top:10px;}
-  .pill{display:inline-block;background:#0d1117;border:1px solid var(--brd);color:var(--acc);border-radius:999px;padding:4px 12px;font-size:.8rem;margin-bottom:18px;}
-  .pill2{display:inline-block;background:#0d1117;border:1px solid var(--brd);color:var(--acc2);border-radius:999px;padding:4px 12px;font-size:.8rem;margin-bottom:18px;}
-  footer{margin-top:40px;border-top:1px solid var(--brd);padding-top:16px;font-size:.85rem;color:var(--muted);}
-  #msg{display:none;margin-top:12px;color:#3fb950;font-weight:600;}
-  .product-card{background:var(--card);border:1px solid var(--acc2);border-radius:10px;padding:24px;margin:20px 0;}
-  .product-card h3{color:var(--acc2);font-size:1.2rem;margin-bottom:10px;}
-  .product-card .price{font-size:1.5rem;font-weight:700;color:var(--txt);margin:8px 0;}
-  .product-card .price span{font-size:1rem;color:var(--muted);font-weight:400;text-decoration:line-through;margin-left:8px;}
-  .divider{border:0;border-top:1px solid var(--brd);margin:32px 0;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#c9d1d9;line-height:1.6;display:flex;flex-direction:column;align-items:center;min-height:100vh;padding:40px 20px}
+  .card{max-width:640px;width:100%;background:#161b22;border:1px solid:#30363d;border-radius:16px;padding:40px 36px;text-align:center}
+  .badge{display:inline-block;background:rgba(88,166,255,.12);color:#58a6ff;border:1px solid rgba(88,166,255,.35);padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:20px}
+  h1{font-size:1.8rem;line-height:1.2;color:#f0f6fc;margin-bottom:12px}
+  p{color:#8b949e;margin-bottom:20px;font-size:1.1rem}
+  .features{text-align:left;list-style:none;margin:24px 0;display:grid;gap:12px}
+  .features li{display:flex;gap:12px;align-items:flex-start;color:#c9d1d9}
+  .features li .n{flex:0 0 26px;height:26px;background:#1a2233;color:#58a6ff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem}
+  .price{font-size:1.6rem;color:#f0f6fc;margin:16px 0}
+  .price span{color:#8b949e;font-size:1rem}
+  .btn{display:inline-block;background:#6c6ef2;color:#fff;border:none;padding:16px 32px;font-size:1.05rem;font-weight:700;border-radius:12px;cursor:pointer;text-decoration:none}
+  .btn:hover{background:#7d7ff5}
+  .redirect-note{font-size:.8rem;color:#6e7681;margin-top:20px}
+  .footer{margin-top:30px;font-size:.78rem;color:#6e7681}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <span class="pill">Free guide · 15-minute read · No per-token bills</span>
-  <h1>Run capable AI on hardware you already own — no cloud lock-in, no per-token bills.</h1>
-  <p class="sub">The 15-minute setup guide that kills GPU/VMware lock-in and keeps sensitive data private.</p>
-
-  <div class="card">
-    <b>Your cloud AI is quietly bleeding you dry.</b>
-    <p>Frontier cloud AI bills per token. VMware/Broadcom renewals jumped several-fold. RunPod GPU-hour costs stack up. And your most sensitive data — client records, student grades, legal work, patient info — can't go near a third-party API.</p>
-    <p>Local AI is the off-ramp. Modern small models (DeepSeek R1, Phi-4, Qwen) run on a laptop and handle the 80% of everyday work — code, notes, private agents — with no subscription and nothing leaving your machine.</p>
-  </div>
-
-  <h2>What's inside the Starter Kit</h2>
-
-  <div class="card">
-    <b>1 · Why local beats cloud.</b>
-    <p>One-time hardware cost instead of per-token bills. Data that never leaves your machine. No vendor lock-in — swap models freely, work offline, survive outages.</p>
-  </div>
-  <div class="card">
-    <b>2 · The 15-minute install.</b>
-    <p>Install Ollama → pull a small model → run it. Optional Open WebUI for a ChatGPT-like interface. Three small models (DeepSeek R1 ~7B, Phi-4 14B, Qwen ~7B) sized for 8/16/32GB machines.</p>
-  </div>
-  <div class="card">
-    <b>3 · The hybrid play that cuts your bill up to 90%.</b>
-    <p>Run local for the 80% of everyday tasks; use cloud only for the 20% that needs frontier power. Keep sensitive workloads private and self-hosted — including a local AI agent for private automation.</p>
-  </div>
-
-  <div class="card">
-    <p><b>Proof it's production-ready:</b> A local Fable model cracked a 370-year-old unsolved cipher this month; Perplexity + Nvidia just shipped a fully-local AI agent with zero token cost. Local AI isn't a toy anymore.</p>
-  </div>
-
-  <div class="card">
-    <b>New: Local AI vs Cloud AI — Cost Calculator 2026</b>
-    <p>How much could you save? A simple comparison guide with real-world scenarios for solos, small teams, and high-volume content businesses. See your break-even point and annual savings.</p>
-    <p><a href="cost-calculator-2026.pdf" style="color:var(--acc);" download>Download the free cost calculator (PDF) &raquo;</a></p>
-  </div>
-
-  <form class="form" id="optin" action="https://honestlyai.org/api/lead" method="POST">
-    <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address">
-    <input type="hidden" name="source" value="local-ai-starter-kit">
-    <button type="submit" class="cta">Send me the free Starter Kit</button>
-  </form>
-  <p id="msg">You're in — check your inbox for the Local AI Starter Kit.</p>
-  <p class="privacy">Free. No account needed beyond your email. One-time read. We don't sell or share your data (privacy line).</p>
-
-  <hr class="divider">
-
-  <span class="pill2">Also from honestlyai · $7 · Instant download</span>
-  <h2>Brain Dump → Done: The ADHD Planner That Actually Works</h2>
-  <p class="sub">If your brain has 47 tabs open and none of them are closing — this is the paper-based system that fixes it in 5 minutes.</p>
-
-  <div class="product-card">
-    <h3>🧠 Brain Dump → Done</h3>
-    <p>A simple 5-step paper planner designed specifically for ADHD and AuDHD brains. No app, no subscription, no notifications — just a system that works WITH how your brain actually functions.</p>
-    <div class="price">$7 <span>$15</span></div>
-    <ul>
-      <li><b>Step 1 — Brain Dump:</b> Get every open loop out of your head and onto paper</li>
-      <li><b>Step 2 — Sort:</b> Group by category (work, life, admin, maybe)</li>
-      <li><b>Step 3 — Pick 3:</b> Choose just 3 tasks for today (reduces overwhelm)</li>
-      <li><b>Step 4 — Prioritize:</b> Rank by urgency + energy required</li>
-      <li><b>Step 5 — Weekly Review:</b> Reflect, adjust, and plan next week</li>
-    </ul>
-    <p style="margin-top:16px;"><b>Why it works when apps don't:</b> ADHD brains struggle with digital task managers — too many features, too much friction, too many notifications. Paper removes all of that. The Brain Dump step specifically addresses executive dysfunction by externalizing the working memory load.</p>
-    <p style="margin-top:16px;"><a href="https://honestlyai.org" class="cta2">Get the planner for $7 →</a></p>
-    <p class="privacy" style="margin-top:12px;">Instant PDF download. Print at home. No account needed. Stripe-secured checkout.</p>
-  </div>
-
-  <footer>
-    Built by honestlyai — indie, self-hosted, no cloud telemetry. This page is a free asset; outreach is gated on owner approval.
-  </footer>
+<div class="card">
+  <span class="badge">Honestly AuDHD</span>
+  <h1>Brain Dump → Done</h1>
+  <p>A 5-page paper system for getting the chaos out of your head — and picking the <em>one thing you'll actually do.</em></p>
+  <ul class="features">
+    <li><span class="n">1</span><div><b>Brain Dump</b> — get every tab out of your head onto one page.</div></li>
+    <li><span class="n">2</span><div><b>Sort Into Buckets</b> — group the noise so it stops looping.</div></li>
+    <li><span class="n">3</span><div><b>Pick Just Three</b> — shrink it down to what matters today.</div></li>
+    <li><span class="n">4</span><div><b>Prioritize</b> — choose by energy cost and forward momentum, not urgency panic.</div></li>
+    <li><span class="n">5</span><div><b>Weekly Review</b> — a reset so the pile doesn't rebuild.</div></li>
+  </ul>
+  <div class="price">$7 <span>one-time · instant PDF download</span></div>
+  <a href="https://honestlyai.org/" class="btn">Get the 5-page system →</a>
+  <div class="redirect-note">You'll be redirected to <a href="https://honestlyai.org/">honestlyai.org</a> to complete your purchase.</div>
+  <div class="footer">Made from lived experience — not a medical treatment, not a diagnosis.<br>© 2026 Honestly AuDHD</div>
 </div>
-<script>
-  document.getElementById('optin').addEventListener('submit', function(e){
-    // POST form-encoded to the live capture endpoint (honestlyai.org /api/lead).
-    // If the endpoint is unreachable, fall back to native form submission.
-    e.preventDefault();
-    var form = e.target;
-    var params = new URLSearchParams();
-    params.append('email', form.email.value);
-    params.append('source', 'local-ai-starter-kit');
-    fetch(form.action, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      body: params.toString()
-    }).then(function(resp){
-      if (resp.ok) {
-        document.getElementById('msg').style.display='block';
-        form.querySelector('input[type=email]').value='';
-        form.querySelector('.cta').textContent='✓ Check your inbox';
-      } else {
-        form.submit(); // server-side validation/error page
-      }
-    }).catch(function(){
-      form.submit(); // network failure -> native POST
-    });
-  });
-</script>
 </body>
 </html>
